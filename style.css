@@ -218,7 +218,7 @@ nav {
     text-align: center;
 }
 
-.contact::before {
+.contact:{
     content: "";
     position: absolute;
     top: 0;
