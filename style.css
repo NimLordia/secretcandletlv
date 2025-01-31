@@ -1,0 +1,645 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Assistant', sans-serif;
+    background-color: #fdfdfd;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #f8d5f0;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(61, 51, 51);
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+    background-color: #51d483;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://res.cloudinary.com/dbtfbufig/image/upload/v1738316766/IMG_2922_laukmb.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero .overlay {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow */
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added text shadow */
+}
+
+.btn {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+.featured, .workshops, .shop, .contact {
+    
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.featured h2, .workshops h1, .shop h1, .contact h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.products, .workshop-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product, .workshop {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.product img, .workshop img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product h2, .workshop h2 {
+    margin: 15px 0;
+}
+
+.product p, .workshop p {
+    margin-bottom: 15px;
+}
+
+.product:hover, .workshop:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact label {
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #e68900;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f8b7ef; /* You can adjust this color to better match your design */
+    color: #fff;
+    padding: 10px 20px; /* Reduced padding; */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container p {
+    margin-bottom: 10px;
+    font-size: 0.9em; /* Slightly smaller font size */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 24px; /* Smaller icon size */
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* Additional Footer Links (Optional) */
+.footer-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff9800;
+}
+
+/* Adjust footer for larger screens */
+@media (min-width: 600px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-container p {
+        margin-bottom: 0;
+    }
+
+    .footer-links {
+        margin-bottom: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .product, .workshop {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #333;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        border-radius: 5px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .product, .workshop {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .contact form {
+        padding: 0 10px;
+    }
+}
+
+.workshops {
+    padding: 4px 2px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.workshops h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.workshops p {
+    font-size: 1.2em;
+    margin-bottom: 4px;
+    color: #666;
+}
+
+.workshop-list {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.workshop {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 2px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.workshop img {
+    width: 100%;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.workshop h2 {
+    margin: 1px 0;
+    color: #333;
+}
+
+.workshop p {
+    margin-bottom: 1px;
+    color: #555;
+}
+
+.workshop .btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.workshop .btn:hover {
+    background-color: #e68900;
+}
+
+.gallery {
+    padding: 4px 2px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 140px;
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.contact {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-info {
+    list-style: none;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-info a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+}
+
+.social-links li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff9800;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+.contact {
+    padding: 40px 20px;
+    height: 100vh; /* Ensures the section takes the full height of the viewport */
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+    color: white;
+    background-image: url('https://res.cloudinary.com/dbtfbufig/image/upload/v1738316765/IMG_3079_lg52f6.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    position: relative;
+}
+
+/* Add an overlay for readability */
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for contrast */
+    z-index: 0;
+}
+
+.contact h1, 
+.contact p, 
+.contact-info, 
+.social-links {
+    position: relative; /* Ensures text and content are above the overlay */
+    z-index: 1;
+}
+
+
+/* Contact Info Styling */
+.contact-info {
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Links Styling */
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+}
+
+.social-links li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff9800;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact h1 {
+        font-size: 2em;
+    }
+
+    .contact p {
+        font-size: 1em;
+    }
+
+    .contact-info li {
+        font-size: 1em;
+    }
+}
