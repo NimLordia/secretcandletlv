@@ -10,6 +10,7 @@ body, html {
     font-family: 'Assistant', sans-serif;
     background-color: #fdfdfd;
     line-height: 1.6;
+    margin: 0;
 }
 
 .wrapper {
@@ -385,4 +386,19 @@ footer {
   
 .contact div {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* This makes main expand and push the footer down */
+}
+
+footer {
+  /* Optionally, add margin-top: auto; if needed */
+  margin-top: auto;
 }
