@@ -370,4 +370,19 @@ footer {
       display: none;
     }
   }
+
+  .contact a {
+    color: #fff;
+    text-shadow: 0.1px 0.1px 0.2px black;
+    text-decoration: underline; /* Underline to indicate a link */
+    cursor: pointer;           /* Change cursor to pointer on hover */
+  }
   
+  .contact a:hover {
+    text-decoration: none; /* Optionally remove underline on hover for a cleaner look */
+    border-bottom: 1px solid #fff; /* Add a subtle border to emphasize clickability */
+  }
+  
+.contact div {
+    background-color: rgba(0, 0, 0, 0.8);
+}
