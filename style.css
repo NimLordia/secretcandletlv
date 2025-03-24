@@ -382,6 +382,36 @@ footer {
     border-radius: 8px;                   /* Rounded corners */
     margin-bottom: 20px;                  /* Space between divs */
     box-shadow: 0 2px 5px rgb(102, 53, 45),0.2; /*Subtle shadow for depth*/
+    position: relative;
+    overflow: hidden;
+    /* height: 350px; Fixed card height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.gallery-grid .item img {
+    width: auto;
+    height: 100%;
+    object-fit: fill; /* Scales the large image to fit the container */
+    /* display: block; */
+    max-height: 250px; 
+}
+
+/* Position the price on top of the image */
+.gallery-grid .item .price {
+    position: absolute;
+    margin-top: 10px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    border-radius: 5px;
+    font-size: 1.2em;
+    z-index: 1;
 }
 
 @media (min-width: 768px) {
