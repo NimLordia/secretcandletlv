@@ -177,6 +177,14 @@ nav {
 .workshop:hover, .product:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.workshops a{
+    color: blue;
+    text-decoration: underline;
+}
+.workshops a:hover{
+    color: rgb(0, 174, 255);
+    border-bottom: 1px solid #fff;
+}
 
 /* Gallery */
 .gallery-grid {
@@ -230,7 +238,7 @@ nav {
     text-align: center;
 }
 
-.contact:{
+.contact:div{
     content: "";
     position: absolute;
     top: 0;
